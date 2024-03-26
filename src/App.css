@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000db;
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+#root main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+}
+
+#root main > header {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+#root main > header h1 {
+  font-size: 1.75em;
+  color: #f4d951c2;
+  margin-bottom: 0;
+}
+
+#root main > header button {
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  border: none;
+  border-radius: .25em;
+  padding: .325em 2em;
+  border: 1px solid #f4d951c2;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+#root .turns {
+  display: flex;
+}
+
+#root .turns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; 
+  margin: 0 0 1em 0;
+}
+
+#root .board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  margin: 0;
+}
+
+#root .turns > div {
+  width: 1.5em;
+  height: 1.5em;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-inline: .5em;
+  font-weight: bold;
+  border: none;
+}
+
+.square {
+  border: 1px solid white;
+  width: 3em;
+  height: 3em;
+  margin: .25em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.selected {
+  background-color: black;
+  border-radius: .25em;
+  animation: 2s linear 0s infinite alternate shadow;
+}
+
+.result {
+  background-color: #000000cc;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result > div {
+  background-color: #000000db;
+  width: 15em;
+  height: 15em;
+  border-radius: .25em;
+  border: 2px solid #f4d951c2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result > div > header {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.result .square {
+  width: 2em;
+  height: 2em;
+}
+.result > div > footer {
+  margin-top: 1em;
+}
+
+.result > div > footer > button {
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  animation: 2s linear 0s infinite alternate shadow;
+  border: none;
+  border-radius: .25em;
+  padding: .325em 2em;
+  cursor: pointer;
+}
+
+@keyframes shadow{
+  to {
+    -webkit-box-shadow: 0px 0px 10px -5px #f4d951c2;
+    -moz-box-shadow: 0px 0px 10px -5px #f4d951c2;
+    box-shadow: 0px 0px 10px -5px #f4d951c2;
+  }
+  from {
+    -webkit-box-shadow: 0px 0px 5px 2px #f4d951c2;
+    -moz-box-shadow: 0px 0px 5px 2px #f4d951c2;
+    box-shadow: 0px 0px 5px 2px #f4d951c2;
+  }
+}
+
